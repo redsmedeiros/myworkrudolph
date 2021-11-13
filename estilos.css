@@ -1,0 +1,242 @@
+body{
+
+	margin: 0 auto;
+	width:1400px;
+	background-color:#FFF;
+	overflow: scroll;
+	overflow-x: hidden;
+	background-image: url(imagem/topo.jpg); 
+	background-repeat: repeat-x;
+}
+
+.btmenu{
+	
+	text-decoration: none;
+	display: table-cell;
+	width: 100px;
+	height: 30px;
+	margin: 0px;
+	padding: 1px 5px 1px 5px;
+	background-color: #FFF;
+	text-align: center;
+	vertical-align: middle;
+	border-radius:30px;
+	color:#222;
+	font-family: Arial;
+	font-size: 10px;
+	cursor:pointer;
+
+	
+}
+
+.btmenu:hover{
+	background-color: #FFFACD;
+	color: #6495ED;
+	border: 
+}
+
+#menu{
+	width: 650px;
+	height: 80px;
+	display:table-cell;
+	vertical-align: middle;
+	padding: 0px 0px 0px 100px;
+
+
+}
+
+#slider{
+	width: 100%;
+	height:400px;
+	border:0px;
+	margin:0px;
+	padding: 0px;
+	position:absolute;
+	left:0px;
+
+
+}
+
+#s1, #s2, #s3{
+	
+	opacity: 0;
+	filter:alpha(opacity=0);
+	position: absolute;
+
+}
+
+#formulario{
+
+	
+	display: block;
+	height: 55px;
+	width: 400px;
+	margin:10px;
+	background-color: red;
+
+}
+
+#buscador{
+
+	width: 960px;
+	
+	margin: 400px auto 0px auto;
+
+
+}
+
+#submitid{
+
+	background-color: #FFFACD;
+}
+
+#fbucador{
+	display: flex;
+	border: 2px solid #4682B4;
+	border-radius: 15px;
+	padding: 20px;
+
+}
+
+.divBusca{
+
+	margin: auto;
+	display: inline;
+
+}
+
+label{
+
+	display: block;
+}
+
+#titulop{
+	
+	font-size: 30px;
+	color:#4682B4;	
+	padding: 10px 0px 0px 0px;
+	margin: 0px 0px 10px 0px;
+}
+
+#rodape{
+
+	background:#4682B4;
+	padding: 1px 20px;
+	margin: 15px 0px 0px 0px;
+}
+
+#login{
+
+	text-decoration: none;
+	color: #4682B4;
+	vertical-align: middle;
+}
+
+#main{
+
+	padding-top: 40px;
+	float: left;	
+
+}
+
+#divlogin{
+
+	width:420px;
+	margin: 150px auto 0px auto;
+
+}
+
+.in_login{
+
+	height: 55px;
+	width: 400px;
+	margin: 10px;
+	border-radius: 30px;
+
+}
+
+#h1id{
+
+	text-align: center;
+	color: #4682B4;
+	font-size: 40px;
+}
+
+#butonsenha{
+
+	cursor:pointer;
+}
+
+
+#navgerenciamento{
+
+
+	height: 700px;
+	width: 120px;
+	margin: 13px 0px 0px 0px;
+	display:inline;
+}
+
+.btgerenciamento{
+	text-decoration: none;
+	display: table-cell;
+	width: 100%;
+	height: 30px;
+	margin: 0px;
+	padding: 1px 5px 1px 5px;
+	background-color: #ABC;
+	text-align: center;
+	vertical-align: middle;
+	color:#FFF;
+	font-family: Arial;
+	font-size: 15px;
+	cursor:pointer;
+	border: 0px;
+
+}
+
+.btgerenciamento:hover{
+	background-color: #FFFACD;
+	color: #6495ED;
+	border: 
+}
+
+.menub{
+
+	text-decoration: none;
+	display: table-cell;
+	width: 100%;
+	height: 30px;
+	margin: 0px;
+	padding: 1px 5px 1px 5px;
+	background-color: #ABC;
+	text-align: center;
+	vertical-align: middle;
+	color:#FFF;
+	font-family: Arial;
+	
+	cursor:pointer;
+	border: 0px;
+	visibility: hidden;
+}
+
+.menub a{
+	text-decoration: none;
+	color:#191970;
+	display: block;
+	font-size: 15px;
+	width: 110px;
+	padding-top: 10px;
+
+
+	
+
+}
+
+.menub a:hover{
+	
+	color: #FFFACD;
+	
+}
+
+

@@ -1,0 +1,44 @@
+<script src="jquery-3.1.1.min.js"></script>
+
+<script>
+	
+	var slides = ["#s1","#s2","#s3"];
+	slideatual = 0;
+	slidemax = 2;
+	tempo = 5000;
+
+
+	$(document).ready(function(){
+		
+		$(slides[slideatual]).fadeTo(1000,1);
+		setInterval(troca, tempo);
+
+		function troca(){
+
+		$(slides[slideatual]).fadeTo(1000,0);
+		slideatual++;
+		if(slideatual > slidemax){
+			slideatual = 0;
+		}
+		$(slides[slideatual]).fadeTo(1000,1);
+
+
+		}
+	});	
+
+
+
+</script>
+
+
+
+
+<img id="s1" src="slider/s1.jpg" >
+<img id="s2" src="slider/s2.jpg" >
+<img id="s3" src="slider/s3.jpg" >
+	
+
+
+
+
+

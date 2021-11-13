@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Aliança Noivas</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="estilos.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+		<script>
+
+			var imgs = [];
+			var slider;
+			var imgAtual;
+			var maxImg;
+			var tempo;
+			
+			function preCarregamento(){
+				var s = 1;
+				for (var i = 0; i < 4; i++) {
+					imgs[i] = new Image();
+					imgs[i].src = "img/s"+s+".jpg";
+					s++;
+				}
+				
+			}
+
+			function carregarImg(img){
+				slider.style.backgroundImage = "url('"+imgs[img].src+"')"
+
+			}
+
+			function iniciar(){
+				preCarregamento();
+				imgAtual = 0;
+				maxImg = imgs.length-1;
+				slider = document.getElementById("dvslider");
+				carregarImg(imgAtual);
+				tempo = setInterval(troca, 4000);
+			}
+
+			function troca(){
+				imgAtual++;
+				if(imgAtual > maxImg){
+					imgAtual = 0;
+				}
+				carregarImg(imgAtual);
+
+			}
+
+			window.addEventListener("load", iniciar);
+
+
+			//----------------------------------------------------------------------------------------------
+
+			var imgs1 = [];
+			var slider1;
+			var imgAtual1;
+			var maxImg1;
+			var tempo1;
+			var vtempo;
+			var vbarra;
+			var tempoTroca;
+			
+			function preCarregamento1(){
+				var s = 1;
+				for (var i = 0; i < 4; i++) {
+					imgs1[i] = new Image();
+					imgs1[i].src = "img2/s"+s+".jpg";
+					s++;
+				}
+				
+			}
+
+			function carregarImg1(img){
+				slider1.style.backgroundImage = "url('"+imgs1[img].src+"')"
+
+			}
+
+			function iniciar1(){
+				preCarregamento1();
+				imgAtual1 = 0;
+				maxImg1 = imgs1.length-1;
+				slider1 = document.getElementById("dvslider1");
+				vbarra = document.getElementById("dvbarra");
+				carregarImg1(imgAtual1);
+				tempoTroca = 0
+				anima();
+			
+			}
+
+			function troca1(dir){
+				tempoTroca = 0;
+				imgAtual1+=dir;
+				if(imgAtual1 > maxImg1){
+					imgAtual1 = 0;
+				}else if(imgAtual1  < 0){
+					imgAtual1 = maxImg1; 	
+				}
+				carregarImg1(imgAtual1);
+
+			}
+
+			function anima(){
+
+				tempoTroca++;
+				if(tempoTroca >= 500){
+					tempoTroca = 0;
+					troca1(1);
+				}
+				vtempo = tempoTroca / 5;
+				vbarra.style.width = vtempo+"%";
+				window.requestAnimationFrame(anima);
+
+			}
+
+			window.addEventListener("load", iniciar1);
+
+
+
+
+
+		</script>
+	</head>
+	<body>
+		<header>
+				<div class="topo">
+					<div class="divisaoTopo">	
+						<img src="img/a1.png">
+						
+					</div>
+				</div>
+
+				<div class="menuTopo">
+					<div class="divDoMenu">
+						<a href="index.php" class="botaoMenu" target="_self">Home</a>
+						<a href="" class="botaoMenu" target="_self">Contato</a>
+						<a href="" class="botaoMenu" target="_self">Local</a>
+						<a href="" class="botaoMenu" target="_self">Redes</a>
+					</div>	
+				</div>
+		</header>
+
+		<section class="slider" id="dvslider">
+
+			
+
+		</section>
+
+		<section class="redesSociais">
+
+		
+			<a id="instaId" href="#" target="_self" title="Instagram" class="destaques"><img src="img/r1.png"></a>
+			<a href="#" target="_self" title="Whatsapp" class="destaques"><img src="img/r2.png"></a>
+			<a href="#" target="_self" title="Facebook" class="destaques"><img src="img/r3.png"></a>
+		
+
+		</section>
+
+
+
+		<section class="apresentacao">
+
+
+
+			<div class="animacao" id="dvslider1">
+
+				<button class="btSlider" onclick="troca1(-1)"><</button>
+				<div id="dvLoad">
+					<div id="dvbarra"></div>
+				</div>
+				<button class="btSlider" onclick="troca1(1)">></button>
+
+				
+
+			</div>
+
+			<div class="teste">
+
+			<h1>Os vestidos mais sofisticados para você</h1>
+
+			<p>Tradição que se expressa em mais de três décadas de trabalho, no mesmo endereço, vestindo milhares e milhares de noivas em seu dia de sonho maior: o dia do casamento.
+
+			Inovação que se manifesta em cada um de nossos modelos de vestidos de noiva, seja nas nossas coleções prêt-à-porter, lançadas anualmente, seja nos vestidos prontos desenvolvidos em peças únicas e exclusivas, ou nos vestidos sob medida de alta-costura, para noivas que querem ainda mais exclusividade no seu casamento.
+
+			Sempre apresentando as tendências mais atuais da moda noiva mundial, refinadas por nossos estilistas para adaptá-la ao gosto da noiva brasileira.</p>
+
+			</div>
+
+		</section>
+
+		<div class="localização">
+			
+			<h1>Localização</h1>
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d237204.672416328!2d-43.52260984091346!3d-21.728999901824185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989c43e1f85da1%3A0x6236b026b3a0a468!2sJuiz%20de%20Fora%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1634043504608!5m2!1spt-BR!2sbr" width="960px" height="250" style="border:0; margin-left: 175px;" allowfullscreen="" loading="lazy"></iframe>
+
+		</div>
+
+		<section class="contato">
+
+			<h1>Contatos</h1>
+
+			<div class="dvContatos">
+				<label class="label">Nome Completo</label>
+				<input type="text" name="" id="nome" class="inputPadrao" required>
+
+				<label class="label">Email</label>
+				<input type="text" name="" id="email" class="inputPadrao" placeholder="seunome@dominio.com" required>
+
+				<label class="label">Telefone</label>
+				<input type="text" name="" id="telefone" class="inputPadrao" required placeholder="(DDD) X XXXX - XXXX">
+
+
+			</div>
+			
+
+		</section>
+
+		<footer class="rodape">
+			
+
+		</footer>
+			
+
+		
+	</body>
+</html>

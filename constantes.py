@@ -1,0 +1,9 @@
+LARGURA = 480 #constantes sempre em letras maiusculas
+ALTURA = 600
+TITULO_JOGO = "Pacmam"
+FPS = 30 #FRAMES
+PRETO = (0,0,0)
+IMAGEM = 'spritesheet.png'
+PACMAN = 'pacman-logo-1.png'
+FONT = 'arial'
+AMARELO = (244,233,51)
